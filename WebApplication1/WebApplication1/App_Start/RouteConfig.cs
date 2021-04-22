@@ -12,18 +12,12 @@ namespace WebApplication1
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            
-            routes.MapRoute(
-               name: "Statyczne",
-               url: "info/{nazwa}",
-               defaults: new { controller = "Home", action = "StronyStopka"}
-           );
 
             routes.MapRoute(
-                name: "Trasa1",
-                url: "info/{nazwa}",
-                defaults: new { controller = "Home", action = "StronyStopka" }
-            );    
+                name: "StronyStatyczne",
+                url: "stopka/{nazwa}",
+                defaults: new { controller = "Home", action = "StronyStatyczne"}
+            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
